@@ -1,7 +1,7 @@
 # Card-Dealer
-A group of card dealing and analyzing programs I wrote for my programming class
+A group of card dealing and analyzing programs I wrote for my programming class.
 
-*cardanalyzer.py* is not complete yet
+*cardanalyzer.py* is not complete yet.
 
 *carddealer.py* asks for the number of hands and cards per hand a user would like from a standard deck of cards. The resulting hands are printed.
 
