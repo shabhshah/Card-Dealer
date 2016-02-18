@@ -36,6 +36,80 @@ def playAnotherTime():
 def blankLine():
 	print " "
 
+def playerCount():
+	global player_count
+	list_item = 0
+	player_count = 0
+	for item in player_cards:
+		if "2" in player_cards[list_item]:
+			player_count += 2
+		elif "3" in player_cards[list_item]:
+			player_count += 3
+		elif "4" in player_cards[list_item]:
+			player_count += 4
+		elif "5" in player_cards[list_item]:
+			player_count += 5
+		elif "6" in player_cards[list_item]:
+			player_count += 6
+		elif "7" in player_cards[list_item]:
+			player_count += 7
+		elif "8" in player_cards[list_item]:
+			player_count += 8
+		elif "9" in player_cards[list_item]:
+			player_count += 9
+		elif "10" in player_cards[list_item]:
+			player_count += 10
+		elif "Jack" in player_cards[list_item]:
+			player_count += 10
+		elif "Queen" in player_cards[list_item]:
+			player_count += 10
+		elif "King" in player_cards[list_item]:
+			player_count += 10
+		elif "Ace" in player_cards[list_item]:
+			player_count += 11
+		list_item +=1
+
+def dealerCount():
+	global dealer_count
+	list_item = 0
+	dealer_count = 0
+	for item in dealer_cards:
+		if "2" in dealer_cards[list_item]:
+			dealer_count += 2
+		elif "3" in dealer_cards[list_item]:
+			dealer_count += 3
+		elif "4" in dealer_cards[list_item]:
+			dealer_count += 4
+		elif "5" in dealer_cards[list_item]:
+			dealer_count += 5
+		elif "6" in dealer_cards[list_item]:
+			dealer_count += 6
+		elif "7" in dealer_cards[list_item]:
+			dealer_count += 7
+		elif "8" in dealer_cards[list_item]:
+			dealer_count += 8
+		elif "9" in dealer_cards[list_item]:
+			dealer_count += 9
+		elif "10" in dealer_cards[list_item]:
+			dealer_count += 10
+		elif "Jack" in dealer_cards[list_item]:
+			dealer_count += 10
+		elif "Queen" in dealer_cards[list_item]:
+			dealer_count += 10
+		elif "King" in dealer_cards[list_item]:
+			dealer_count += 10
+		elif "Ace" in dealer_cards[list_item]:
+			dealer_count += 11
+		list_item +=1
+
+def score():
+	global player_count
+	global dealer_count
+	print "The player count is " + str(player_count)
+	print "The dealer count is " + str(dealer_count)
+	blankLine()
+
+
 while True:
 	while True:
 		possible_cards = ['2 of diamonds', '3 of diamonds', '4 of diamonds', '5 of diamonds', \
@@ -64,78 +138,13 @@ while True:
 			possible_cards.remove(dealer_card)
 			dealer_cards.append(dealer_card)
 
-		print "The player's cards are: " + ", ".join(player_cards)
 		print "The dealer's cards are: " + ", ".join(dealer_cards)
+		print "Your cards are: " + ", ".join(player_cards)
 		blankLine()
 
-		player_count = 0
-		dealer_count = 0
-
-		list_item = 0
-		for item in player_cards:
-			if "2" in player_cards[list_item]:
-				player_count += 2
-			elif "3" in player_cards[list_item]:
-				player_count += 3
-			elif "4" in player_cards[list_item]:
-				player_count += 4
-			elif "5" in player_cards[list_item]:
-				player_count += 5
-			elif "6" in player_cards[list_item]:
-				player_count += 6
-			elif "7" in player_cards[list_item]:
-				player_count += 7
-			elif "8" in player_cards[list_item]:
-				player_count += 8
-			elif "9" in player_cards[list_item]:
-				player_count += 9
-			elif "10" in player_cards[list_item]:
-				player_count += 10
-			elif "Jack" in player_cards[list_item]:
-				player_count += 10
-			elif "Queen" in player_cards[list_item]:
-				player_count += 10
-			elif "King" in player_cards[list_item]:
-				player_count += 10
-			elif "Ace" in player_cards[list_item]:
-				player_count += 11
-
-			list_item +=1
-
-		list_item = 0	
-		for item in dealer_cards:
-			if "2" in dealer_cards[list_item]:
-				dealer_count += 2
-			elif "3" in dealer_cards[list_item]:
-				dealer_count += 3
-			elif "4" in dealer_cards[list_item]:
-				dealer_count += 4
-			elif "5" in dealer_cards[list_item]:
-				dealer_count += 5
-			elif "6" in dealer_cards[list_item]:
-				dealer_count += 6
-			elif "7" in dealer_cards[list_item]:
-				dealer_count += 7
-			elif "8" in dealer_cards[list_item]:
-				dealer_count += 8
-			elif "9" in dealer_cards[list_item]:
-				dealer_count += 9
-			elif "10" in dealer_cards[list_item]:
-				dealer_count += 10
-			elif "Jack" in dealer_cards[list_item]:
-				dealer_count += 10
-			elif "Queen" in dealer_cards[list_item]:
-				dealer_count += 10
-			elif "King" in dealer_cards[list_item]:
-				dealer_count += 10
-			elif "Ace" in dealer_cards[list_item]:
-				dealer_count += 11
-
-			list_item +=1
-
-		print "The player count is " + str(player_count)
-		print "The dealer count is " + str(dealer_count)
-		blankLine()
+		playerCount()
+		dealerCount()
+		score()
 
 		if player_count == 21:
 			print "You win!"
@@ -162,40 +171,10 @@ while True:
 			dealer_cards.append(dealer_card)		
 			print "The dealer's cards are: " + ", ".join(dealer_cards)
 			blankLine()
-			list_item = 0
-			dealer_count = 0
-			for item in dealer_cards:
-				if "2" in dealer_cards[list_item]:
-					dealer_count += 2
-				elif "3" in dealer_cards[list_item]:
-					dealer_count += 3
-				elif "4" in dealer_cards[list_item]:
-					dealer_count += 4
-				elif "5" in dealer_cards[list_item]:
-					dealer_count += 5
-				elif "6" in dealer_cards[list_item]:
-					dealer_count += 6
-				elif "7" in dealer_cards[list_item]:
-					dealer_count += 7
-				elif "8" in dealer_cards[list_item]:
-					dealer_count += 8
-				elif "9" in dealer_cards[list_item]:
-					dealer_count += 9
-				elif "10" in dealer_cards[list_item]:
-					dealer_count += 10
-				elif "Jack" in dealer_cards[list_item]:
-					dealer_count += 10
-				elif "Queen" in dealer_cards[list_item]:
-					dealer_count += 10
-				elif "King" in dealer_cards[list_item]:
-					dealer_count += 10
-				elif "Ace" in dealer_cards[list_item]:
-					dealer_count += 11
-				list_item +=1
+		
+			dealerCount()
 
-			print "The player count is " + str(player_count)
-			print "The dealer count is " + str(dealer_count)
-			blankLine()
+			score()
 
 			if player_count == 21:
 				print "You win!"
@@ -224,7 +203,7 @@ while True:
 		while True:
 
 			while True:
-				dealAgain = raw_input("Would you like another hand?: ")
+				dealAgain = raw_input("Would you like another card?: ")
 				if dealAgain == "yes" or \
 				   dealAgain == "y":
 					ifcont = 1
@@ -244,43 +223,12 @@ while True:
 			player_card = random.choice(possible_cards)
 			possible_cards.remove(player_card)
 			player_cards.append(player_card)
-			print "The player's cards are: " + ", ".join(player_cards)
+			print "Your cards are: " + ", ".join(player_cards)
 			blankLine()
 
-			list_item = 0
-			player_count = 0
-			for item in player_cards:
-				if "2" in player_cards[list_item]:
-					player_count += 2
-				elif "3" in player_cards[list_item]:
-					player_count += 3
-				elif "4" in player_cards[list_item]:
-					player_count += 4
-				elif "5" in player_cards[list_item]:
-					player_count += 5
-				elif "6" in player_cards[list_item]:
-					player_count += 6
-				elif "7" in player_cards[list_item]:
-					player_count += 7
-				elif "8" in player_cards[list_item]:
-					player_count += 8
-				elif "9" in player_cards[list_item]:
-					player_count += 9
-				elif "10" in player_cards[list_item]:
-					player_count += 10
-				elif "Jack" in player_cards[list_item]:
-					player_count += 10
-				elif "Queen" in player_cards[list_item]:
-					player_count += 10
-				elif "King" in player_cards[list_item]:
-					player_count += 10
-				elif "Ace" in player_cards[list_item]:
-					player_count += 11
-				list_item +=1
+			playerCount()
 			
-			print "The player count is " + str(player_count)
-			print "The dealer count is " + str(dealer_count)
-			blankLine()
+			score()
 
 			if player_count == 21:
 				print "You win!"
