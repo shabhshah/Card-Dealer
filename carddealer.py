@@ -106,6 +106,7 @@ while True:
 			tableRow.append(cardSelected)
 		t = "Hand " + str(handNumber) + ": " + ", ".join(tableRow)
 		print textwrap.fill(t)
+		blankLine()
 		handNumber += 1
 
 	#playing agian
