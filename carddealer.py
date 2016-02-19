@@ -50,7 +50,7 @@ class color:
 
 #welcome
 blankLine()
-s = "Welcome to Rishabh's card dealer. Please type in all numerical answers as " + color.BOLD + "digits" +color.END + " (eg. instead of fifty-two, type 52). The final hands will be dealt as text."
+s = "Welcome to Rishabh's card dealer. Please type in all numerical answers as " + color.BOLD + color.RED + "digits" +color.END + " (eg. instead of fifty-two, type 52). The final hands will be dealt as text."
 print textwrap.fill(s)
 wait(1)
 blankLine()
