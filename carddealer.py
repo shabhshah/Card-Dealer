@@ -50,7 +50,7 @@ class color:
 
 #welcome
 blankLine()
-s = "Welcome to Rishabh's card dealer. Please type in all numerical answers as " + color.BOLD + "digits" +color.END + " (eg. instead of fifty-two, type 52). The final hands will be dealt into a table."
+s = "Welcome to Rishabh's card dealer. Please type in all numerical answers as " + color.BOLD + "digits" +color.END + " (eg. instead of fifty-two, type 52). The final hands will be dealt as text."
 print textwrap.fill(s)
 wait(1)
 blankLine()
@@ -62,31 +62,33 @@ while True:
 	while True:
 		while True:
 			handsAsked = raw_input("How many hands would you like?: ")
-			if str(handsAsked) == '52' or str(handsAsked) == '51' or str(handsAsked) == '50' or str(handsAsked) == '49' or str(handsAsked) == '48' or str(handsAsked) == '47' or str(handsAsked) == '46' or str(handsAsked) == '45' or str(handsAsked) == '44' or str(handsAsked) == '43' or str(handsAsked) == '42' or str(handsAsked) == '41' or str(handsAsked) == '40' or str(handsAsked) == '39' or str(handsAsked) == '38' or str(handsAsked) == '37' or str(handsAsked) == '36' or str(handsAsked) == '35' or str(handsAsked) == '34' or str(handsAsked) == '33' or str(handsAsked) == '32' or str(handsAsked) == '31' or str(handsAsked) == '30' or str(handsAsked) == '29' or str(handsAsked) == '28' or str(handsAsked) == '27' or str(handsAsked) == '26' or str(handsAsked) == '25' or str(handsAsked) == '24' or str(handsAsked) == '23' or str(handsAsked) == '22' or str(handsAsked) == '21' or str(handsAsked) == '20' or str(handsAsked) == '19' or str(handsAsked) == '18' or str(handsAsked) == '17' or str(handsAsked) == '16' or str(handsAsked) == '15' or str(handsAsked) == '14' or str(handsAsked) == '13' or str(handsAsked) == '12' or str(handsAsked) == '11' or str(handsAsked) == '10' or str(handsAsked) == '9' or str(handsAsked) == '8' or str(handsAsked) == '7' or str(handsAsked) == '6' or str(handsAsked) == '5' or str(handsAsked) == '4' or str(handsAsked) == '3' or str(handsAsked) == '2' or str(handsAsked) == '1':
-				blankLine()
-				wait(1)
-				break
-			else:
+			try:
+				int(handsAsked) +1
+			except:
 				blankLine()
 				wait(1)
 				print "You entered something that does not compute. Please try again."
 				blankLine()
 				wait(1)
-				continue
+			else:
+				blankLine()
+				wait(1)
+				break
 
 		while True:	
 			cardsAsked = raw_input("How many cards per hand would you like?: ")
-			if str(cardsAsked) == '52' or str(cardsAsked) == '51' or str(cardsAsked) == '50' or str(cardsAsked) == '49' or str(cardsAsked) == '48' or str(cardsAsked) == '47' or str(cardsAsked) == '46' or str(cardsAsked) == '45' or str(cardsAsked) == '44' or str(cardsAsked) == '43' or str(cardsAsked) == '42' or str(cardsAsked) == '41' or str(cardsAsked) == '40' or str(cardsAsked) == '39' or str(cardsAsked) == '38' or str(cardsAsked) == '37' or str(cardsAsked) == '36' or str(cardsAsked) == '35' or str(cardsAsked) == '34' or str(cardsAsked) == '33' or str(cardsAsked) == '32' or str(cardsAsked) == '31' or str(cardsAsked) == '30' or str(cardsAsked) == '29' or str(cardsAsked) == '28' or str(cardsAsked) == '27' or str(cardsAsked) == '26' or str(cardsAsked) == '25' or str(cardsAsked) == '24' or str(cardsAsked) == '23' or str(cardsAsked) == '22' or str(cardsAsked) == '21' or str(cardsAsked) == '20' or str(cardsAsked) == '19' or str(cardsAsked) == '18' or str(cardsAsked) == '17' or str(cardsAsked) == '16' or str(cardsAsked) == '15' or str(cardsAsked) == '14' or str(cardsAsked) == '13' or str(cardsAsked) == '12' or str(cardsAsked) == '11' or str(cardsAsked) == '10' or str(cardsAsked) == '9' or str(cardsAsked) == '8' or str(cardsAsked) == '7' or str(cardsAsked) == '6' or str(cardsAsked) == '5' or str(cardsAsked) == '4' or str(cardsAsked) == '3' or str(cardsAsked) == '2' or str(cardsAsked) == '1':
-				blankLine()
-				wait(1)
-				break
-			else:
+			try:
+				int(cardsAsked) + 1
+			except:
 				blankLine()
 				wait(1)
 				print "You entered something that does not compute. Please try again."
 				blankLine()
 				wait(1)
-				continue
+			else:
+				blankLine()
+				wait(1)
+				break
 						
 		if int(handsAsked)*int(cardsAsked) > 52:
 			print "You entered something that does not compute. Please try again"
