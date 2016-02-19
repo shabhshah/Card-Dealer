@@ -36,70 +36,35 @@ def playAnotherTime():
 def blankLine():
 	print " "
 
-def playerCount():
-	global player_count
+def playerCount(x,y):
 	list_item = 0
-	player_count = 0
-	for item in player_cards:
-		if "2" in player_cards[list_item]:
-			player_count += 2
-		elif "3" in player_cards[list_item]:
-			player_count += 3
-		elif "4" in player_cards[list_item]:
-			player_count += 4
-		elif "5" in player_cards[list_item]:
-			player_count += 5
-		elif "6" in player_cards[list_item]:
-			player_count += 6
-		elif "7" in player_cards[list_item]:
-			player_count += 7
-		elif "8" in player_cards[list_item]:
-			player_count += 8
-		elif "9" in player_cards[list_item]:
-			player_count += 9
-		elif "10" in player_cards[list_item]:
-			player_count += 10
-		elif "Jack" in player_cards[list_item]:
-			player_count += 10
-		elif "Queen" in player_cards[list_item]:
-			player_count += 10
-		elif "King" in player_cards[list_item]:
-			player_count += 10
-		elif "Ace" in player_cards[list_item]:
-			player_count += 11
-		list_item +=1
-
-def dealerCount():
-	global dealer_count
-	list_item = 0
-	dealer_count = 0
-	for item in dealer_cards:
-		if "2" in dealer_cards[list_item]:
-			dealer_count += 2
-		elif "3" in dealer_cards[list_item]:
-			dealer_count += 3
-		elif "4" in dealer_cards[list_item]:
-			dealer_count += 4
-		elif "5" in dealer_cards[list_item]:
-			dealer_count += 5
-		elif "6" in dealer_cards[list_item]:
-			dealer_count += 6
-		elif "7" in dealer_cards[list_item]:
-			dealer_count += 7
-		elif "8" in dealer_cards[list_item]:
-			dealer_count += 8
-		elif "9" in dealer_cards[list_item]:
-			dealer_count += 9
-		elif "10" in dealer_cards[list_item]:
-			dealer_count += 10
-		elif "Jack" in dealer_cards[list_item]:
-			dealer_count += 10
-		elif "Queen" in dealer_cards[list_item]:
-			dealer_count += 10
-		elif "King" in dealer_cards[list_item]:
-			dealer_count += 10
-		elif "Ace" in dealer_cards[list_item]:
-			dealer_count += 11
+	for item in y:
+		if "2" in y[list_item]:
+			x += 2
+		elif "3" in y[list_item]:
+			x += 3
+		elif "4" in y[list_item]:
+			x += 4
+		elif "5" in y[list_item]:
+			x += 5
+		elif "6" in y[list_item]:
+			x += 6
+		elif "7" in y[list_item]:
+			x += 7
+		elif "8" in y[list_item]:
+			x += 8
+		elif "9" in y[list_item]:
+			x += 9
+		elif "10" in y[list_item]:
+			x += 10
+		elif "Jack" in y[list_item]:
+			x += 10
+		elif "Queen" in y[list_item]:
+			x += 10
+		elif "King" in y[list_item]:
+			x += 10
+		elif "Ace" in y[list_item]:
+			x += 11
 		list_item +=1
 
 def score():
@@ -142,8 +107,8 @@ while True:
 		print "Your cards are: " + ", ".join(player_cards)
 		blankLine()
 
-		playerCount()
-		dealerCount()
+		playerCount(player_count,player_cards)
+		playerCount(dealer_count,dealer_cards)
 		score()
 
 		if player_count == 21:
@@ -172,7 +137,7 @@ while True:
 			print "The dealer's cards are: " + ", ".join(dealer_cards)
 			blankLine()
 		
-			dealerCount()
+			playerCount(dealer_count,dealer_cards)
 
 			score()
 
@@ -226,7 +191,7 @@ while True:
 			print "Your cards are: " + ", ".join(player_cards)
 			blankLine()
 
-			playerCount()
+			playerCount(player_count,player_cards)
 			
 			score()
 
